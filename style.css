@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  /* background: no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; */
+  background-color: rgb(67, 126, 168);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  /* text-shadow: 0px 0px 20px #aaaaaa; */
+}
+
+main {
+  padding: 15px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+div.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+div.middle {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+div.top-left {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  text-align: center;
+  min-height: 100px;
+  width: 45%;
+  border-radius: 5px;
+}
+
+.blockquote {
+  margin: 5px;
+  padding: 25px;
+  background: #f8fffe;
+  border-left: 25px solid #b0d2cb;
+  color: rgb(67, 126, 168);
+  border-radius: 4px;
+  height: 95%;
+}
+
+.quote {
+  font-family: "Gelasio", serif;
+  font-style: italic;
+  font-size: 1.5rem;
+}
+
+.author {
+  font-family: "Gelasio", serif;
+  font-style: normal;
+  font-weight: bold;
+  text-align: right;
+  font-size: 1.6rem;
+}
+
+.author::before {
+  content: "\2014\0020";
+}
+
+div.top-right {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 5px;
+  /* text-align: center; */
+  min-height: 100px;
+  width: 45%;
+  border-radius: 5px;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-around;
+}
+
+div.weather {
+  background: #000000d0;
+  opacity: 0.8;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px;
+  width: 70%;
+}
+.date-time {
+  width: 20%;
+  text-align: center;
+  margin: 5px auto;
+  margin-top: 50px;
+}
+
+div.middle-right {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  text-align: center;
+  min-height: 300px;
+  width: 25%;
+  border-radius: 5px;
+}
+
+.input-field {
+  width: 80%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid lightblue;
+  border-radius: 5px;
+}
+
+.input-button {
+  cursor: pointer;
+  border: none;
+  margin: 10px 0px 0px;
+  padding: 0px 6px;
+  border-radius: 4px;
+  box-shadow: rgb(235 235 235) 0px 6px 0px;
+  /* font-family: ArialRounded; */
+  font-weight: bold;
+  font-size: 22px;
+  height: 25px;
+  color: rgb(67, 126, 168);
+  font-weight: bold;
+  width: 100px;
+  background-color: white;
+}
+
+.input-button:hover {
+  transform: scale(0.98);
+}
+
+h2.pomo {
+  text-align: center;
+}
