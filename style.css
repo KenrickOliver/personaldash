@@ -58,7 +58,6 @@ div.top-left {
   font-style: italic;
   font-size: 1.5rem;
 }
-
 .author {
   font-family: "Gelasio", serif;
   font-style: normal;
@@ -80,7 +79,7 @@ div.top-right {
   border-radius: 5px;
   display: flex;
   /* flex-direction: column; */
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 div.weather {
@@ -89,8 +88,17 @@ div.weather {
   border-radius: 5px;
   margin: 5px;
   padding: 5px;
+  padding-left: 25px;
   width: 70%;
+  text-align: center;
 }
+
+.weather-icon {
+  display: inline-block;
+  height: 70px;
+  width: 70px;
+}
+
 .date-time {
   width: 20%;
   text-align: center;
