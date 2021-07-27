@@ -19,7 +19,6 @@
       <div class="top">
         <div class="top-left">
           <blockquote class="blockquote">
-            <p class="bquote"></p>
             <p id="quote" class="quote"></p>
             <p id="author" class="author"></p>
           </blockquote>
@@ -35,17 +34,42 @@
       <!-- MIDDLE SECTION -->
       <div class="middle">
         <div class="middle-left">
-          <h2 class="pomo">Pomo</h2>
+          <p id="work" class="label">Work</p>
+          <p id="break" class="label">Break</p>
+          <p id="cycles" class="label">Cycles</p>
+          <!--Work Timer-->
+          <div id="work-timer" class="timer">
+            <p id="w-minutes">1</p>
+            <p class="semicolon">:</p>
+            <p id="w-seconds">00</p>
+          </div>
+
+          <!--Cycle Counter-->
+          <p id="counter" class="timer">0</p>
+
+          <!--Break Timer-->
+          <div id="break-timer" class="timer">
+            <p id="b-minutes">1</p>
+            <p class="semicolon">:</p>
+            <p id="b-seconds">00</p>
+          </div>
+          <!-- buttons -->
+          <button id="start" class="btn">Start</button>
+          <button id="stop" class="btn">Pause</button>
+          <button id="reset" class="btn">Reset</button>
         </div>
         <div class="middle-right">
-          <h2 class="pomo-tracker">Tracker</h2>
+          <h2># of Cycles</h2>
+          <ul class="counter-list"></ul>
         </div>
       </div>
       <!-- BOTTOM SECTION -->
       <div class="bottom">
-        <button class="add" id="add">
-          <i class="fas fa-plus"></i> Add Note
-        </button>
+        <div class="note-buttons">
+          <button class="add" id="add">
+            <i class="fas fa-plus"></i> Add Note
+          </button>
+        </div>
         <div class="notes-container"></div>
       </div>
     </main>
