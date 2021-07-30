@@ -35,8 +35,8 @@ const getWeather = () => {
               alt="weather icon"
             />
             <div class="weather-info">
+                <p class="weather-humidity">Humidity: ${data.main.humidity} %</p>
                 <p class="weather-description">${data.weather[0].description}</p>
-                <p class="weather-humidity">${data.main.humidity} %</p>
                 <p class="weather-wind">Speed: ${data.wind.speed} km/h</p>
             </div>
             `

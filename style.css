@@ -148,6 +148,7 @@ div.middle-right {
 div.middle-right {
   background-color: rgba(255, 255, 255, 0.1);
   padding: 10px;
+  padding-top: 20px;
   text-align: center;
   min-height: 250px;
   width: 49.5%;
@@ -159,7 +160,7 @@ div.middle-right {
   align-self: center;
   justify-self: center;
 
-  font-size: 30px;
+  font-size: 2rem;
   font-weight: bold;
 }
 
@@ -178,7 +179,7 @@ div.middle-right {
   align-self: center;
   justify-self: center;
 
-  font-size: 30px;
+  font-size: 2rem;
   font-weight: bold;
 }
 
@@ -209,7 +210,7 @@ p {
   width: 100px;
   height: 30px;
 
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: bold;
   color: rgb(67, 126, 168);
   background-color: #fff;
@@ -349,8 +350,19 @@ div.bottom {
 
 /* ***** START Responsive STYLING ***** */
 
-@media (max-width: 600px) {
+@media (max-width: 1050px) {
+  .btn {
+    width: 90px;
+    height: 30px;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 280px) and (max-width: 769px) {
   /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+  html {
+    font-size: 14px;
+  }
   div.top {
     display: flex;
     flex-direction: column;
@@ -361,23 +373,93 @@ div.bottom {
     margin-bottom: 10px;
   }
 
+  .quote {
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+    padding-bottom: 15px;
+  }
+
+  .author {
+    font-size: 1.1rem;
+  }
+
   div.top-right {
     width: 100%;
   }
-}
 
-@media (min-width: 250px) and (max-width: 649px) {
-  /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
   div.middle {
     display: flex;
     flex-direction: column;
   }
+
   div.middle-left {
     width: 100%;
     margin-bottom: 10px;
   }
 
   div.middle-right {
+    width: 100%;
+  }
+  .note {
+    margin: 5px;
+    height: 250px;
+    width: 300px;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 320px) {
+  html {
+    font-size: 10px;
+  }
+  .btn {
+    width: 80px;
+    height: 25px;
+    font-size: 0.9rem;
+  }
+  .note {
+    margin: 3px;
+    height: 200px;
+    width: 250px;
+  }
+}
+
+@media (min-width: 770px) and (max-width: 964px) {
+  div.top {
+    display: flex;
+    flex-direction: column;
+  }
+
+  div.top-left {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  div.top-right {
+    width: 100%;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 439px) {
+  div.top {
+    display: flex;
+    flex-direction: column;
+  }
+
+  div.top-left {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  div.top-right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  div.weather {
+    width: 100%;
+  }
+
+  .date-time {
     width: 100%;
   }
 }
