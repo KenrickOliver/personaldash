@@ -1,7 +1,7 @@
 # Personal Dash
 
 A personal productivity Web App that mimics a dashboard layout.<br />
-A Live Demo of the app can be found [here](https://kenrickoliver.github.io/personaldash/).
+A Live Demo of the app can be found here: [Live Site](https://kenrickoliver.github.io/personaldash/).
 
 Some of the Apps main features include:
 - Consuming data from 3rd party APIs to fetch random quotes.
