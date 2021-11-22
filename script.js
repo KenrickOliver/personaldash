@@ -52,16 +52,6 @@ const getWeather = () => {
 
 getWeather();
 
-/*
-coords: GeolocationCoordinates
-accuracy: 1960
-altitude: null
-altitudeAccuracy: null
-heading: null
-latitude: 43.58144
-longitude: -79.6229632
-speed: null
-*/
 
 // Function to getquote
 function getQuote() {
@@ -83,17 +73,7 @@ function getQuote() {
 }
 getQuote();
 
-//Function to get and display the current Date/Time
-// function setTime() {
-//     let today = new Date();
-//     let date = 'Date: ' + today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-//     let time = 'Time: ' + today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds()+" "+(today.getHours()<12 ? 'AM' : 'PM');
 
-//     timeHeading.innerHTML = time;
-//     dateHeading.innerHTML = date;
-// }
-
-// setInterval(setTime, 1000); //Update the time every second(1000 milliseconds)
 
 // ** FETCHING THE POSTION AND WEATHER **
 // Clock Functionality
@@ -273,7 +253,7 @@ function stopInterval() {
   clearInterval(startTimer);
 }
 
-// Tracking Cycles via peaches
+// Tracking Cycles via pomos
 function addItem() {
   let newImage = document.createElement("img");
   newImage.setAttribute("class", "image-item");
@@ -344,10 +324,7 @@ function addNewNote(text = " ") {
 
 function updateLS() {
   const notesText = document.querySelectorAll("textarea");
-
   const notes = [];
-
   notesText.forEach((note) => notes.push(note.value));
-
   localStorage.setItem("notes", JSON.stringify(notes));
 }
