@@ -3,6 +3,26 @@ const dateHeading = document.querySelector(".date-heading");
 const quote = document.getElementById("quote");
 const author = document.getElementById("author");
 
+// Function to getquote
+function getQuote() {
+  fetch("https://type.fit/api/quotes")
+    .then((res) => res.json())
+    .then((data) => {
+      let randInd = Math.floor(Math.random() * data.length);
+      let auth = data[randInd].author ? data[randInd].author : "Unknown";
+      quote.innerHTML = `${data[randInd].text}`;
+      author.innerHTML = `${auth}`;
+    })
+    .catch((err) => {
+      console.log(err);
+      let txt = "Once you choose hope, anythings possible.";
+      let auth = "Christopher Reeve";
+      quote.innerHTML = `${txt}`;
+      author.innerHTML = `${auth}`;
+    });
+}
+getQuote();
+
 /* **FETCHING THE POSTION AND WEATHER** */
 const getPosition = () => {
   return new Promise((resolve, reject) => {
@@ -53,30 +73,7 @@ const getWeather = () => {
 getWeather();
 
 
-// Function to getquote
-function getQuote() {
-  fetch("https://type.fit/api/quotes")
-    .then((res) => res.json())
-    .then((data) => {
-      let randInd = Math.floor(Math.random() * data.length);
-      let auth = data[randInd].author ? data[randInd].author : "Unknown";
-      quote.innerHTML = `${data[randInd].text}`;
-      author.innerHTML = `${auth}`;
-    })
-    .catch((err) => {
-      console.log(err);
-      let txt = "Once you choose hope, anythings possible.";
-      let auth = "Christopher Reeve";
-      quote.innerHTML = `${txt}`;
-      author.innerHTML = `${auth}`;
-    });
-}
-getQuote();
-
-
-
-// ** FETCHING THE POSTION AND WEATHER **
-// Clock Functionality
+// ** Clock and Time Functionality **
 
 const hour = document.getElementById("clock-hour");
 const minutes = document.getElementById("clock-minutes");
@@ -168,7 +165,7 @@ const clockText = () => {
 };
 setInterval(clockText, 1000);
 
-// ***** TIMER Functionality
+/* *** TIMER Functionality *** */
 let start = document.getElementById("start");
 let stop = document.getElementById("stop");
 let reset = document.getElementById("reset");
