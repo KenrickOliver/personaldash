@@ -13,6 +13,7 @@ Some of the Apps main features include:
 ## Features
 
 ### Display random motivational quote
+
 This is one of the simpler features of this App. All we are doing is dispalying a random motivational quote in the top left hand corner of the app. The quotes are fetched from a 3rd party API and we are using a random number to select which quote we use.
 ```
 function getQuote() {
@@ -39,3 +40,35 @@ We are using the built in fetch function in JavaScript to make the API call. We 
 Sometimes there is no author so we conditonally check for this and then just display "Unknown" if no author is provided.<br />
 As you can see we are also error checking using the .catch method and we have a default fallback quote we can display incase something goes wrong when we make the API call.<br />
 Lastly, as soon as the app loads the getQuote function is called so each time the app is loaded OR refreshed, it should trigger an API call to get a differnt quote.
+
+### Display weather based on location
+
+This feature also makes a request to a 3rd party API, specifically the Open Weather API.
+The difference between this feature compared to the quotes feature is that it relies on addtional data BEFORE making the API call.
+We are using the built in geolocation feature available in the browser to get the user's current location. 
+We then make a call to the weather API to get the weather and other info based on the location we obtained.
+
+```
+const getPosition = () => {
+  return new Promise((resolve, reject) => {
+    navigator.geolocation.getCurrentPosition(resolve, reject);
+  });
+};
+
+const getWeather = () => {
+  getPosition()
+    .then((position) => {
+      const { latitude: lat, longitude: lon } = position.coords;
+
+...
+
+```
+
+### Display Date and Time as well as a visual Clock
+
+This feature while simple, leans into CSS a bit more to render a clock on the screen but ALSO the date and time underneath in a very readable font.
+
+![Clock Feature displaying date and time](./assets/images/Clock-feature.PNG) 
+
+
+
