@@ -68,7 +68,35 @@ const getWeather = () => {
 
 This feature while simple, leans into CSS a bit more to render a clock on the screen but ALSO the date and time underneath in a very readable font.
 
-![Clock Feature displaying date and time](./assets/images/Clock-feature.PNG) 
+![Clock Feature displaying date and time](./assets/images/Clock-feature.PNG)
+
+### Work Cycles with Timer
+
+This feature is my variation of the popular pomodoro timer productivity tool.
+While there are various versions and time variations of the pomodoro timer, the most common times are 25 minutes of work with a 5min break time.
+
+![Work Cycle feature based on pomodoro technique](./assets/images/Work-cycle-feature.PNG)
+
+For the purpose of showcasing the demo version of this app/feature I reduced the work timer and break timer to 1min each.<br />
+I also added a visual indicator besides the timer functions to display a peach png upon successful completion of one FULL rotation (called a cycle) consistiing of 1 work session and 1 break session. The number of pngs should mach up with the Cycles indicator. This is done by manipulating the DOM and appending a new image as a li(list item) and then appending that to a ul(unordered list).
+
+```
+// Tracking Cycles via pomos
+function addItem() {
+  let newImage = document.createElement("img");
+  newImage.setAttribute("class", "image-item");
+  newImage.setAttribute("alt", "work peach");
+  newImage.src = "./assets/peach.png";
+
+  let liItem = document.createElement("li");
+  liItem.setAttribute("class", "li-item");
+  liItem.appendChild(newImage);
+  listCounter.appendChild(liItem);
+}
+
+```
+The three buttons underneath the timers are self explanitory in that the Start button starts the timer, the pause button pauses the timer regardless of where in the cycle the user is whether it is work OR break. Lastly the reset button resets the entire widget by reseting both times and resetting the # of Cycles to 0. Resetting the widget also removes the pngs and returns the # of work cycles area to a blank state.
+
 
 
 
